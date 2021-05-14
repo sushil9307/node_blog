@@ -1,0 +1,27 @@
+<%- include('header.ejs'); -%>
+	<h1 class="text-center">List Of Articles</h1>
+	<div class="row">
+		<div class="col-md-2">
+	</div>
+	<div class="col-md-8">
+	<% articles.forEach(article => { %>
+		<div class="container mb-4">
+			<h4 class="title">
+				<%= article.title %>
+			</h4>
+			<p class="art_desc">
+				<%= article.description %>
+			</p>
+			<div>
+			  <a class="btn btn-sm btn-primary" href="/edit/<%= article.id %>">Edit</a>
+			  <a class="btn btn-sm btn-danger" href="/delete/<%= article.id %>">Delete</a>
+			</div>
+		</div>
+	<% }) %>
+	</div>
+	<div class="col-md-2">
+		<a class="btn btn-sm btn-success" href="/new">Create New</a>
+	</div>
+	</div>
+</body>
+</html>
