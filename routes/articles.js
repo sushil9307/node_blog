@@ -6,8 +6,9 @@ const article = require('../models/article')
 // List
 router.get('/', article.index);
 
-// Edit page
+// show Edit page
 router.get('/edit/:id', article.edit);
+// Edit Article
 router.post('/update/:id', article.update);
 
 // Delete
